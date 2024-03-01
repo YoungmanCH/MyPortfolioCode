@@ -6,6 +6,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/MyPortfolio/' : '/',
   plugins: [react()],
-  assetsInclude: ['**/*.glb']
+  assetsInclude: ['**/*.glb'],
+  build: { chunkSizeWarningLimit: 1600 }
 });
-
